@@ -1,0 +1,353 @@
+
+    .hero-home-section {
+      min-height: 640px !important;
+      background: #080b10 !important;
+      position: relative !important;
+      isolation: isolate !important
+    }
+
+    .hero-home-section>.uniloom-hero-background {
+      background-image: linear-gradient(90deg, rgba(5, 8, 13, .78) 0%, rgba(5, 8, 13, .52) 48%, rgba(5, 8, 13, .30) 100%), url("https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg") !important;
+      background-size: cover !important;
+      background-position: center 48% !important;
+      z-index: 0 !important
+    }
+
+    .hero-home-section .hero-home-wrapper {
+      z-index: 3 !important
+    }
+
+    .hero-home-section .hero-home-bottom {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, .72fr) !important;
+      gap: clamp(30px, 5vw, 84px) !important;
+      align-items: center !important
+    }
+
+    .hero-home-section .hero-home-contents {
+      max-width: 720px !important
+    }
+
+    .hero-home-section .hero-home-title {
+      max-width: 760px !important;
+      color: #fff !important
+    }
+
+    .hero-home-section .hero-video-wrap {
+      width: 100% !important;
+      max-width: 440px !important;
+      justify-self: end !important;
+      position: relative !important;
+      z-index: 4 !important
+    }
+
+    .hero-home-section .hero-video-details {
+      position: relative !important;
+      width: 100% !important;
+      aspect-ratio: 4/3 !important;
+      min-height: 260px !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      background: #111 !important;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .35) !important
+    }
+
+    .hero-home-section .hero-home-video.uniloom-hero-still {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important
+    }
+
+    .hero-home-section .hero-video-details:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(0deg, rgba(0, 0, 0, .42), rgba(0, 0, 0, .06) 60%);
+      pointer-events: none
+    }
+
+    .hero-home-section .hero-video-details .video-lightbox,
+    .hero-home-section .hero-video-details .watch-block {
+      display: none !important
+    }
+
+    .uniloom-hero-play {
+      position: absolute !important;
+      z-index: 5 !important;
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      width: 76px !important;
+      height: 76px !important;
+      border: 1px solid rgba(255, 255, 255, .75) !important;
+      border-radius: 50% !important;
+      background: rgba(255, 255, 255, .16) !important;
+      backdrop-filter: blur(12px) !important;
+      color: #fff !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 7px !important;
+      cursor: pointer !important;
+      transition: transform .25s ease, background .25s ease !important
+    }
+
+    .uniloom-hero-play:hover {
+      transform: translate(-50%, -50%) scale(1.08) !important;
+      background: rgba(255, 255, 255, .28) !important
+    }
+
+    .uniloom-play-icon {
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 13px solid #fff;
+      margin-left: 4px
+    }
+
+    .uniloom-play-label {
+      font-size: 8px;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .video-popup {
+      display: none;
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 99999 !important;
+      background: rgba(0, 0, 0, .92) !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 5vw !important
+    }
+
+    .video-popup.uniloom-popup-open {
+      display: flex !important
+    }
+
+    .video-popup .popup-video-wrap {
+      width: min(1100px, 92vw) !important;
+      max-height: 82vh !important;
+      position: relative !important
+    }
+
+    .video-popup .popup-video,
+    .video-popup video {
+      width: 100% !important;
+      max-height: 82vh !important;
+      aspect-ratio: 16/9 !important;
+      object-fit: contain !important
+    }
+
+    .video-popup .cross-video-icon {
+      position: absolute !important;
+      right: 0 !important;
+      top: -42px !important;
+      width: 28px !important;
+      height: 28px !important;
+      cursor: pointer !important;
+      display: block !important;
+      z-index: 10 !important
+    }
+
+    .satisfied-section {
+      overflow: clip !important
+    }
+
+    .satisfied-section .satisfied-height-wrap {
+      position: relative !important;
+      overflow: visible !important
+    }
+
+    .satisfied-section .satisfied-sticky-wrap {
+      position: sticky !important;
+      top: 76px !important;
+      overflow: visible !important
+    }
+
+    .satisfied-section .satisfied-main-wrap,
+    .satisfied-section .satisfied-wrapper,
+    .satisfied-section .satisfied-middle,
+    .satisfied-section .satisfied-card-wrap {
+      overflow: visible !important
+    }
+
+    .satisfied-section .satisfied-card-wrap {
+      position: relative !important;
+      display: grid !important;
+      grid-template-columns: minmax(0, 430px) !important;
+      justify-content: center !important;
+      align-items: start !important;
+      min-height: 500px !important;
+      padding: 20px 0 72px !important
+    }
+
+    .satisfied-section .satisfied-card {
+      grid-area: 1/1 !important;
+      position: sticky !important;
+      top: 132px !important;
+      width: 100% !important;
+      max-width: 430px !important;
+      margin: 0 auto 24px !important;
+      transform-origin: center top !important;
+      border-radius: 14px !important;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, .10) !important
+    }
+
+    .satisfied-section .satisfied-card:nth-child(2) {
+      top: 148px !important
+    }
+
+    .satisfied-section .satisfied-card:nth-child(3) {
+      top: 164px !important
+    }
+
+    .satisfied-section .satisfied-card:nth-child(4) {
+      top: 180px !important
+    }
+
+    .satisfied-section .satisfied-img {
+      display: block !important;
+      width: 100% !important;
+      height: clamp(210px, 25vw, 300px) !important;
+      object-fit: cover !important;
+      object-position: center 18% !important;
+      border-radius: 10px !important
+    }
+
+    .satisfied-section .satisfied-logo {
+      display: none !important
+    }
+
+    .satisfied-section .satisfied-card-contents {
+      padding: 14px 16px 16px !important
+    }
+
+    .satisfied-section .satisfied-review {
+      font-size: 14px !important;
+      line-height: 1.55 !important
+    }
+
+    .pricing-section .pricing-tabs-menu {
+      display: flex !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      margin: 26px 0 24px !important
+    }
+
+    .pricing-section .pricing-tabs-link {
+      border: 1px solid #d7d7d7 !important;
+      background: #fff !important;
+      color: #151515 !important;
+      border-radius: 999px !important;
+      padding: 11px 20px !important;
+      font-size: 13px !important;
+      font-weight: 600 !important
+    }
+
+    .pricing-section .pricing-tabs-link.w--current {
+      background: #111 !important;
+      color: #fff !important;
+      border-color: #111 !important
+    }
+
+    .pricing-section .pricing-tabs-cards {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 18px !important;
+      align-items: stretch !important
+    }
+
+    .pricing-section .pricing-tabs-card {
+      height: 100% !important;
+      min-height: 100% !important;
+      border-radius: 14px !important;
+      overflow: hidden !important
+    }
+
+    .pricing-section .pricing-tabs-card:nth-child(2) {
+      background: #111 !important;
+      color: #fff !important
+    }
+
+    .pricing-section .pricing-tabs-card:nth-child(2) .plan-name,
+    .pricing-section .pricing-tabs-card:nth-child(2) .plan-desp,
+    .pricing-section .pricing-tabs-card:nth-child(2) .pricing-duration,
+    .pricing-section .pricing-tabs-card:nth-child(2) .what-includes,
+    .pricing-section .pricing-tabs-card:nth-child(2) .pricing-list-item {
+      color: #fff !important
+    }
+
+    .pricing-section .pricing-tabs-card:nth-child(2) .pricing-top-card,
+    .pricing-section .pricing-tabs-card:nth-child(2) .pricing-bottom-card,
+    .pricing-section .pricing-tabs-card:nth-child(2) .pricing-top-details {
+      background: #111 !important;
+      color: #fff !important
+    }
+
+    .pricing-section .pricing-tabs-card:nth-child(2) .pricing-list-icon {
+      filter: brightness(0) invert(1) !important
+    }
+
+    @media(max-width:900px) {
+      .hero-home-section {
+        min-height: 0 !important
+      }
+
+      .hero-home-section .hero-home-bottom {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important
+      }
+
+      .hero-home-section .hero-video-wrap {
+        max-width: 560px !important;
+        justify-self: start !important
+      }
+
+      .hero-home-section .hero-video-details {
+        aspect-ratio: 16/9 !important;
+        min-height: 0 !important
+      }
+    }
+
+    @media(max-width:640px) {
+      .hero-home-section .hero-home-bottom {
+        gap: 24px !important
+      }
+
+      .hero-home-section .hero-home-title {
+        font-size: clamp(38px, 10vw, 58px) !important
+      }
+
+      .hero-home-section .hero-video-wrap {
+        max-width: 100% !important
+      }
+
+      .satisfied-section .satisfied-card-wrap {
+        grid-template-columns: minmax(0, 1fr) !important;
+        min-height: 440px !important
+      }
+
+      .satisfied-section .satisfied-card {
+        max-width: 100% !important
+      }
+
+      .pricing-section .pricing-tabs-cards {
+        grid-template-columns: 1fr !important
+      }
+
+      .pricing-section .pricing-tabs-link {
+        padding: 10px 14px !important
+      }
+    }
+  

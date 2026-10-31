@@ -1,0 +1,161 @@
+
+    /* Drag-to-scroll interaction for the Europa-derived speaker rail */
+    .uniloom-eu-speakers-viewport {
+      cursor: grab;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none
+    }
+
+    .uniloom-eu-speakers-viewport.is-dragging {
+      cursor: grabbing
+    }
+
+    .uniloom-eu-speakers-track {
+      transition: transform .08s linear
+    }
+
+    .uniloom-eu-speaker-slide img {
+      pointer-events: none;
+      -webkit-user-drag: none
+    }
+
+    .uniloom-eu-speakers-viewport.is-dragging a,
+    .uniloom-eu-speakers-viewport.is-dragging button {
+      pointer-events: none
+    }
+
+    /* Equal-height pass cards across both pricing tabs */
+    .pricing-tabs-cards {
+      align-items: stretch
+    }
+
+    .pricing-tabs-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pricing-top-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pricing-top-details {
+      height: 100%;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pricing-details-wrap {
+      flex: 1
+    }
+
+    .pricing-bottom-card {
+      flex: 1
+    }
+
+    .pricing-list {
+      flex: 1
+    }
+
+    .pricing-section .pricing-tabs-pane {
+      height: auto
+    }
+
+    .pricing-section .pricing-tabs-cards {
+      height: 100%
+    }
+
+    .pricing-section .pricing-tabs-card {
+      min-height: 100%
+    }
+
+    @media(min-width:768px) {
+      .pricing-tabs-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch
+      }
+
+      .pricing-tabs-card {
+        min-height: 100%
+      }
+    }
+
+    /* Purchase form modal */
+    #uniloom-pass-modal {
+      max-height: min(88vh, 850px);
+      overflow: auto
+    }
+
+    #uniloom-pass-modal .uniloom-purchase-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 22px;
+      text-align: left
+    }
+
+    #uniloom-pass-modal .uniloom-form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    #uniloom-pass-modal .uniloom-form-field.full {
+      grid-column: 1/-1
+    }
+
+    #uniloom-pass-modal label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #333
+    }
+
+    #uniloom-pass-modal input,
+    #uniloom-pass-modal select,
+    #uniloom-pass-modal textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 13px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fff;
+      color: #111;
+      font: inherit;
+      font-size: 14px
+    }
+
+    #uniloom-pass-modal .uniloom-modal-action {
+      width: 100%;
+      grid-column: 1/-1;
+      cursor: pointer
+    }
+
+    #uniloom-pass-modal .uniloom-form-note {
+      grid-column: 1/-1;
+      font-size: 11px;
+      line-height: 1.5;
+      color: #888;
+      margin: 0
+    }
+
+    #uniloom-pass-modal .uniloom-form-feedback {
+      grid-column: 1/-1;
+      font-size: 13px;
+      color: #333;
+      margin: 0
+    }
+
+    @media(max-width:560px) {
+      #uniloom-pass-modal .uniloom-purchase-form {
+        grid-template-columns: 1fr
+      }
+
+      #uniloom-pass-modal .uniloom-form-field.full {
+        grid-column: auto
+      }
+    }
+  

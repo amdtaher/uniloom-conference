@@ -1,0 +1,255 @@
+
+    /* UNILOOM logo */
+    .update-navbar .brand-img,
+    .footer .brand-img {
+      width: auto !important;
+      height: auto !important;
+      max-width: 190px !important;
+      max-height: 54px !important;
+      object-fit: contain !important;
+      display: block !important;
+    }
+
+    .footer .brand-img {
+      max-width: 180px !important;
+      max-height: 58px !important
+    }
+
+    /* Remove the pricing toggle and the Student / Builder tab selector. */
+    .pricing-section .pricing-toggle,
+    .pricing-section .pricing-tabs-menu {
+      display: none !important
+    }
+
+    .pricing-section .pricing-tabs-content {
+      display: block !important
+    }
+
+    .pricing-section .pricing-tabs-pane[data-w-tab="Tab 1"] {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important
+    }
+
+    .pricing-section .pricing-tabs-pane[data-w-tab="Tab 2"] {
+      display: none !important
+    }
+
+    /* Keep both pass cards aligned and their Buy Pass buttons on the same baseline. */
+    .pricing-section .pricing-tabs-cards {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      align-items: stretch !important;
+      gap: 18px !important
+    }
+
+    .pricing-section .pricing-tabs-card {
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important
+    }
+
+    .pricing-section .pricing-top-card {
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important
+    }
+
+    .pricing-section .pricing-top-details {
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important
+    }
+
+    .pricing-section .pricing-details-wrap {
+      flex: 1 1 auto !important
+    }
+
+    .pricing-section .pricing-top-details>a,
+    .pricing-section .pricing-top-details .button-nav {
+      /* margin-top: auto !important; */
+      align-self: stretch !important
+    }
+
+    .pricing-section .pricing-abs-text._02 {
+      background: #111 !important;
+      color: #fff !important;
+      border: 1px solid rgba(255, 255, 255, .2) !important
+    }
+
+    /* Clean, white, vertically stacked purchase modal. */
+    #uniloom-pass-modal {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 999999 !important;
+      display: none;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 20px !important;
+      background: rgba(7, 9, 13, .72) !important;
+      backdrop-filter: blur(7px) !important;
+      overflow-y: auto !important
+    }
+
+    #uniloom-pass-modal.is-open {
+      display: flex !important
+    }
+
+    #uniloom-pass-modal .uniloom-modal-panel {
+      position: relative !important;
+      z-index: 2 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      width: min(100%, 540px) !important;
+      max-height: min(90vh, 850px) !important;
+      overflow-y: auto !important;
+      box-sizing: border-box !important;
+      padding: 38px !important;
+      background: #fff !important;
+      color: #111 !important;
+      border: 1px solid #e9e9e9 !important;
+      border-radius: 18px !important;
+      box-shadow: 0 28px 90px rgba(0, 0, 0, .28) !important
+    }
+
+    #uniloom-pass-modal .uniloom-modal-close {
+      position: absolute !important;
+      top: 15px !important;
+      right: 18px !important;
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 50% !important;
+      background: #f2f2f2 !important;
+      color: #111 !important;
+      font-size: 25px !important;
+      display: grid !important;
+      place-items: center !important
+    }
+
+    #uniloom-pass-modal .uniloom-modal-eyebrow {
+      margin: 0 !important;
+      color: #6b42a6 !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: .12em !important
+    }
+
+    #uniloom-pass-modal h2 {
+      margin: 0 !important;
+      color: #111 !important;
+      font-size: 34px !important;
+      line-height: 1.1 !important
+    }
+
+    #uniloom-pass-modal .uniloom-modal-copy {
+      margin: 0 !important;
+      color: #666 !important;
+      line-height: 1.5 !important
+    }
+
+    #uniloom-pass-modal .uniloom-purchase-form {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 15px !important;
+      width: 100% !important;
+      margin: 10px 0 0 !important
+    }
+
+    #uniloom-pass-modal .uniloom-form-field {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 7px !important;
+      width: 100% !important
+    }
+
+    #uniloom-pass-modal .uniloom-form-field.full {
+      width: 100% !important
+    }
+
+    #uniloom-pass-modal label {
+      color: #222 !important;
+      font-size: 12px !important;
+      font-weight: 600 !important
+    }
+
+    #uniloom-pass-modal input,
+    #uniloom-pass-modal select,
+    #uniloom-pass-modal textarea {
+      width: 100% !important;
+      min-height: 46px !important;
+      box-sizing: border-box !important;
+      padding: 12px 14px !important;
+      border: 1px solid #dedede !important;
+      border-radius: 9px !important;
+      background: #fafafa !important;
+      color: #111 !important;
+      font: inherit !important;
+      font-size: 14px !important;
+      outline: none !important
+    }
+
+    #uniloom-pass-modal textarea {
+      min-height: 92px !important;
+      resize: vertical !important
+    }
+
+    #uniloom-pass-modal input:focus,
+    #uniloom-pass-modal select:focus,
+    #uniloom-pass-modal textarea:focus {
+      border-color: #7a55a8 !important;
+      background: #fff !important
+    }
+
+    #uniloom-pass-modal .uniloom-form-note {
+      margin: 0 !important;
+      color: #777 !important;
+      font-size: 11px !important;
+      line-height: 1.5 !important
+    }
+
+    #uniloom-pass-modal .uniloom-form-feedback {
+      margin: 0 !important;
+      color: #333 !important;
+      font-size: 13px !important
+    }
+
+    #uniloom-pass-modal .uniloom-modal-action {
+      width: 100% !important;
+      min-height: 50px !important;
+      margin-top: 4px !important;
+      border: 0 !important;
+      border-radius: 999px !important;
+      background: #111 !important;
+      color: #fff !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      cursor: pointer !important
+    }
+
+    @media(max-width:700px) {
+      .pricing-section .pricing-tabs-cards {
+        grid-template-columns: 1fr !important
+      }
+
+      .update-navbar .brand-img {
+        max-width: 150px !important;
+        max-height: 46px !important
+      }
+    }
+
+    @media(max-width:560px) {
+      #uniloom-pass-modal {
+        padding: 12px !important
+      }
+
+      #uniloom-pass-modal .uniloom-modal-panel {
+        padding: 30px 20px 22px !important;
+        border-radius: 14px !important
+      }
+
+      #uniloom-pass-modal h2 {
+        font-size: 29px !important
+      }
+    }
+  

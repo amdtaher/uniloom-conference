@@ -1,0 +1,154 @@
+
+    /* UNILOOM refinements: readable image overlays and contained pricing typography */
+    .hero-home-section .hero-video-wrap,
+    .hero-home-section .hero-home-video,
+    .hero-home-section .video-lightbox,
+    .brand-section.cta .brand-video-wrapp {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-home-section .hero-home-video.uniloom-hero-still {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      z-index: 0;
+    }
+
+    .hero-home-section .hero-video-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background: rgba(8, 12, 18, .28);
+    }
+
+    .hero-home-section .video-lightbox::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: rgba(8, 12, 18, .22);
+    }
+
+    .hero-home-section .video-lightbox-banner {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-section.cta .uniloom-cta-still-wrap {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .brand-section.cta .uniloom-cta-still {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+
+    .brand-section.cta .uniloom-cta-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: rgba(8, 12, 18, .28);
+    }
+
+    .brand-section.cta .brand-content-wrapp {
+      position: relative;
+      z-index: 2;
+    }
+
+    .worldwide-section .uniloom-ecosystem-icon {
+      display: block;
+      width: 42px;
+      height: 42px;
+      color: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .pricing-section .pricing-tabs-card,
+    .pricing-section .pricing-top-card,
+    .pricing-section .pricing-bottom-card,
+    .pricing-section .pricing-top-details,
+    .pricing-section .pricing-details-wrap {
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pricing-section .pricing-price {
+      font-size: clamp(20px, 2.2vw, 34px) !important;
+      line-height: 1.08 !important;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      max-width: 100%;
+    }
+
+    .pricing-section .plan-name {
+      font-size: clamp(21px, 2vw, 30px) !important;
+      line-height: 1.12 !important;
+      overflow-wrap: anywhere;
+    }
+
+    .pricing-section .plan-desp,
+    .pricing-section .pricing-list-item,
+    .pricing-section .what-includes,
+    .pricing-section .pricing-duration,
+    .pricing-section .nav-button-text {
+      font-size: clamp(13px, 1.05vw, 16px) !important;
+      line-height: 1.45 !important;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      white-space: normal !important;
+      max-width: 100%;
+    }
+
+    .pricing-section .pricing-list-details {
+      min-width: 0;
+      align-items: flex-start;
+    }
+
+    .pricing-section .pricing-list-icon {
+      flex: 0 0 auto;
+    }
+
+    .pricing-section .pricing-tabs-card * {
+      box-sizing: border-box;
+    }
+
+    .stprice{
+      margin-top: 30px !important;
+    }
+
+    @media (max-width: 767px) {
+      .pricing-section .pricing-price {
+        font-size: 24px !important;
+      }
+
+      .pricing-section .plan-name {
+        font-size: 22px !important;
+      }
+
+      .pricing-section .plan-desp,
+      .pricing-section .pricing-list-item {
+        font-size: 14px !important;
+      }
+    }
+  

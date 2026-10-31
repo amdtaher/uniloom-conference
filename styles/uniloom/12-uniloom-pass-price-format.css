@@ -1,0 +1,22 @@
+
+    .pricing-section .pricing-price {
+      display: block !important;
+      font-size: clamp(34px, 3.2vw, 48px) !important;
+      font-weight: 600 !important;
+      line-height: 1 !important;
+      letter-spacing: -.04em !important;
+      margin-bottom: 8px !important;
+    }
+
+    .project-all-tags2{
+      margin-right: 5rem;
+    }
+
+    .pricing-section .pricing-duration {
+      display: block !important;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      opacity: .7 !important;
+      margin-top: 0 !important;
+    }
+  

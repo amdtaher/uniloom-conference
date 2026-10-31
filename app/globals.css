@@ -1,0 +1,7 @@
+/*
+  Tailwind base (preflight) is intentionally NOT included: it would reset the
+  Webflow design. Only components/utilities are generated, and only from the
+  paths listed in tailwind.config.ts.
+*/
+@tailwind components;
+@tailwind utilities;

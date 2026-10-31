@@ -1,0 +1,13 @@
+
+    .w-webflow-badge,
+    a[href*="webflow.com?utm_campaign=brandjs"],
+    a[href*="webflow.com"][class*="badge"],
+    div[class*="w-webflow-badge"] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+  

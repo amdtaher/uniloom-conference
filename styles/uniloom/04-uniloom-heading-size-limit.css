@@ -1,0 +1,21 @@
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .hero-home-title,
+    .worldwide-title,
+    .committed-title,
+    .section-heading-title,
+    .selected-projects,
+    .satisfied-title,
+    .different-title,
+    .faq-header-title,
+    .resources-title,
+    .brands-title,
+    .footer-left-title {
+      max-height: none;
+    }
+  

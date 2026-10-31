@@ -1,0 +1,206 @@
+
+    .hero-home-section {
+      position: relative !important;
+      isolation: isolate !important;
+      overflow: hidden !important;
+      background-color: #10151b !important
+    }
+
+    .hero-home-section>.uniloom-hero-background {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      display: block !important;
+      opacity: 1 !important;
+      pointer-events: none !important;
+      background-image: linear-gradient(90deg, rgba(8, 12, 18, .72) 0%, rgba(8, 12, 18, .42) 52%, rgba(8, 12, 18, .18) 100%), url("https://images.pexels.com/photos/356065/pexels-photo-356065.jpeg") !important;
+      background-size: cover !important;
+      background-position: center 42% !important
+    }
+
+    .hero-home-section>.padding-global,
+    .hero-home-section .hero-home-wrapper,
+    .hero-home-section .hero-home-top,
+    .hero-home-section .hero-home-bottom {
+      position: relative !important;
+      z-index: 2 !important
+    }
+
+    .hero-home-section .hero-home-title,
+    .hero-home-section .subtites-wrap,
+    .hero-home-section .hero-home-tag {
+      text-shadow: 0 1px 14px rgba(0, 0, 0, .28)
+    }
+
+    .satisfied-section .satisfied-card {
+      background: #f4f4f4 !important;
+      border-radius: 18px !important;
+      padding: 10px !important;
+      overflow: hidden !important;
+      box-shadow: 0 12px 34px rgba(0, 0, 0, .08) !important
+    }
+
+    .satisfied-section .satisfied-img {
+      display: block !important;
+      width: 100% !important;
+      height: clamp(220px, 27vw, 340px) !important;
+      object-fit: cover !important;
+      border-radius: 10px !important
+    }
+
+    .satisfied-section .satisfied-card-contents {
+      padding: 22px 16px 18px !important
+    }
+
+    .satisfied-section .satisfied-stars {
+      display: flex !important;
+      gap: 5px !important;
+      margin: 0 0 18px !important;
+      color: #ed111b !important
+    }
+
+    .satisfied-section .satisfied-stars svg {
+      width: 16px !important;
+      height: 16px !important;
+      display: block !important
+    }
+
+    .satisfied-section .satisfied-review {
+      font-size: clamp(17px, 1.7vw, 24px) !important;
+      line-height: 1.35 !important;
+      color: #111 !important
+    }
+
+    .satisfied-section .satisfied-author-details {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      margin-top: 20px !important
+    }
+
+    .satisfied-section .satisfied-author-name {
+      font-weight: 700 !important
+    }
+
+    .satisfied-section .satisfied-author-role {
+      font-size: 12px !important;
+      opacity: .65 !important;
+      margin-top: 3px !important
+    }
+
+    .satisfied-section .uniloom-quote-icon {
+      width: 34px !important;
+      height: 34px !important;
+      color: #ed111b !important
+    }
+
+    .brand-section.cta .brands-middle-wrapp.cta {
+      position: relative !important;
+      isolation: isolate !important
+    }
+
+    .brand-section.cta .brand-video-wrapp {
+      position: relative !important;
+      isolation: isolate !important
+    }
+
+    .brand-section.cta .brand-video-wrapp:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 8, 12, .58) !important;
+      z-index: 2;
+      pointer-events: none
+    }
+
+    .brand-section.cta .uniloom-cta-copy {
+      z-index: 6 !important;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, .35)
+    }
+
+    .brand-section.cta .uniloom-cta-button {
+      text-shadow: none
+    }
+
+    .latest-blogs-section .latest-blogs-details-wrapper {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      align-items: stretch !important
+    }
+
+    .latest-blogs-section .latest-blogs-details-wrapper>.w-dyn-list,
+    .latest-blogs-section .blogs-dream-card {
+      display: flex !important;
+      flex-direction: column !important;
+      min-width: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      overflow: hidden !important;
+      border-radius: 14px !important
+    }
+
+    .latest-blogs-section .blogs-link-wrapper {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      text-decoration: none !important
+    }
+
+    .latest-blogs-section .blog-image-wrapper,
+    .latest-blogs-section .uniloom-third-blog-image {
+      display: block !important;
+      width: 100% !important;
+      aspect-ratio: 1.35/1 !important;
+      overflow: hidden !important;
+      border-radius: 12px !important
+    }
+
+    .latest-blogs-section .blog-images,
+    .latest-blogs-section .uniloom-third-blog-image img {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important
+    }
+
+    .latest-blogs-section .blog-content-wrapper {
+      padding: 18px 0 !important;
+      flex: 1 !important
+    }
+
+    .latest-blogs-section .uniloom-blog-card {
+      padding: 0 !important;
+      background: transparent !important
+    }
+
+    .latest-blogs-section .uniloom-blog-card .blog-content-wrapper {
+      padding: 18px 0 !important
+    }
+
+    .latest-blogs-section .uniloom-blog-read {
+      display: inline-flex !important;
+      margin: 10px 0 18px !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 4px !important
+    }
+
+    .latest-blogs-section .uniloom-blog-button {
+      display: inline-flex !important;
+      margin-top: 10px !important
+    }
+
+    @media(max-width:900px) {
+      .latest-blogs-section .latest-blogs-details-wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important
+      }
+    }
+
+    @media(max-width:600px) {
+      .latest-blogs-section .latest-blogs-details-wrapper {
+        grid-template-columns: 1fr !important
+      }
+    }
+  

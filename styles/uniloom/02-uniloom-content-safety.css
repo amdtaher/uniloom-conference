@@ -1,0 +1,15 @@
+
+    .satisfied-img,
+    .satisfied-logo {
+      display: none !important
+    }
+
+    .pricing-tabs-menu,
+    .pricing-section .w-tab-menu {
+      display: none !important
+    }
+
+    .hero-home-section .hero-home-tag {
+      letter-spacing: inherit
+    }
+  
