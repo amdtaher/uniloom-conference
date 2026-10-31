@@ -26,9 +26,6 @@ export default function Contact({ className }: ContactProps) {
             <img alt="University startup conference audience and speaker" className="brands-image four" loading="lazy" src={"https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=85"} srcSet="" />
             {" "}
             <div className="uniloom-cta-copy">
-              <p className="uniloom-cta-eyebrow">
-                UNILOOM COMMUNITY
-              </p>
               {" "}
               <h2>
                 Bring your idea. Find your next step at UNILOOM.
