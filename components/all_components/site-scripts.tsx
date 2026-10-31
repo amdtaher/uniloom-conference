@@ -85,33 +85,16 @@ function loadOne(s: (typeof SCRIPTS)[number]) {
 }
 
 /**
- * The original scripts were parsed before DOMContentLoaded / window.load.
- * They are loaded later here, so listeners registered for those events would
- * never fire. While the scripts are loading, run such listeners right away
- * (async) when the event has already happened.
+ * The original scripts ran while the document was still "loading", so Webflow,
+ * jQuery and the inline scripts registered real DOMContentLoaded / load
+ * listeners. Here they run after hydration, when both events are long gone
+ * (cached images = fast load event). Pretend "loading" while the scripts run,
+ * then fire both events for real, in the original order.
  */
-function installLateEventShim() {
-  const docAdd = document.addEventListener;
-  const winAdd = window.addEventListener;
-  const late = (target: EventTarget, type: string, fn: EventListenerOrEventListenerObject) => {
-    setTimeout(() => {
-      const ev = new Event(type);
-      if (typeof fn === "function") fn.call(target, ev);
-      else fn.handleEvent(ev);
-    }, 0);
-  };
-  document.addEventListener = function (this: Document, type: string, fn: EventListenerOrEventListenerObject, opts?: boolean | AddEventListenerOptions) {
-    if (type === "DOMContentLoaded" && document.readyState !== "loading") return late(document, type, fn);
-    return docAdd.call(this, type, fn, opts);
-  } as unknown as typeof document.addEventListener;
-  window.addEventListener = function (this: Window, type: string, fn: EventListenerOrEventListenerObject, opts?: boolean | AddEventListenerOptions) {
-    if (type === "DOMContentLoaded" && document.readyState !== "loading") return late(window, type, fn);
-    if (type === "load" && document.readyState === "complete") return late(window, type, fn);
-    return winAdd.call(this, type, fn, opts);
-  } as unknown as typeof window.addEventListener;
+function fakeLoading() {
+  Object.defineProperty(document, "readyState", { configurable: true, get: () => "loading" });
   return () => {
-    document.addEventListener = docAdd;
-    window.addEventListener = winAdd;
+    delete (document as unknown as { readyState?: string }).readyState; // back to the native getter
   };
 }
 
@@ -146,13 +129,17 @@ export default function SiteScripts() {
   useEffect(() => {
     if (window.__uniloomScriptsStarted) return; // StrictMode / re-mount guard
     window.__uniloomScriptsStarted = true;
-    const restore = installLateEventShim();
+    const wasComplete = document.readyState === "complete";
+    const wasLoading = document.readyState === "loading";
+    const restore = wasLoading ? () => {} : fakeLoading();
     (async () => {
       for (const s of SCRIPTS) {
         await loadOne(s);
         wrapWebflowPush();
       }
-      setTimeout(restore, 1500); // let the last scripts finish their own late-registered listeners
+      restore();
+      if (!wasLoading) document.dispatchEvent(new Event("DOMContentLoaded", { bubbles: true }));
+      if (wasComplete) window.dispatchEvent(new Event("load"));
     })();
   }, []);
   return null;
